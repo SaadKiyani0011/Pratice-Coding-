@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box"><h3>Hello Div 1</h3> </div>
+    <div class="box"><h3>Hello Div 2</h3> </div>
+    <div class="box"><h3>Hello Div 3</h3> </div>
+    <script>
+        let a = document.getElementsByClassName("box");
+        for (let b in a){
+            a[b].innerText = a[b].innerText + " Wellcome";
+        }
+    </script>
+</body>
+</html>
