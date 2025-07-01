@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Append Function</title>
+</head>
+<body>
+    <!-- After adds at the end of node(outside the node) -->
+     <div id="box">This is my div
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+     </div>
+     <script>
+        let btn = document.createElement("button");
+        btn.innerText = "Click Me";
+        document.getElementById("box").after(btn);
+        btn.addEventListener("click", () => {
+            alert("Button Clicked!");
+        })
+     </script>
+</body>
+</html>
+</html>
