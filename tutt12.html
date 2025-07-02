@@ -6,9 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello</h1>
+
+    <label for="Enter">Enter Something:</label>
+    <input type="text" id="Enter" >
+    <button id="btn">Submit</button>
     <script>
-        document.querySelector("h1").innerText = "Wellcome";
+        
+        let btn = document.getElementById("btn");
+        let input = document.getElementById("Enter");
+
+        btn.addEventListener("click", () => {
+            let value = input.value;
+            if (value) {
+                let p = document.createElement("p");
+                p.textContent = value;
+                document.body.appendChild(p);
+                input.value = ""; // Clear the input field
+            } else {
+                alert("Please enter something!");
+            }
+        });
     </script>
 </body>
 </html>
