@@ -7,24 +7,19 @@
 </head>
 <body>
 
-    <label for="Enter">Enter Something:</label>
-    <input type="text" id="Enter" >
-    <button id="btn">Submit</button>
-    <script>
-        
-        let btn = document.getElementById("btn");
-        let input = document.getElementById("Enter");
+    <button id="btn">Red</button>
+    <button id="btn2">Green</button>
+    <button id="btn3">Blue</button>
 
+    <script>
         btn.addEventListener("click", () => {
-            let value = input.value;
-            if (value) {
-                let p = document.createElement("p");
-                p.textContent = value;
-                document.body.appendChild(p);
-                input.value = ""; // Clear the input field
-            } else {
-                alert("Please enter something!");
-            }
+            document.body.style.backgroundColor = "red";
+        });
+        btn2.addEventListener("click", () => {
+            document.body.style.backgroundColor = "green";
+        });
+        btn3.addEventListener("click", () => {
+            document.body.style.backgroundColor = "blue";
         });
     </script>
 </body>
