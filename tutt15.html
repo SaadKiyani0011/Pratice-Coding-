@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="taskInput" placeholder="Add Task">
+<button onclick="addTask()">Add</button>
+<ul id="taskList"></ul>
+
+<script>
+  function addTask() {
+    const input = document.getElementById("taskInput");
+    const text = input.value.trim();
+    if (text !== "") {
+      const li = document.createElement("li");
+      li.innerText = text;
+
+      const delBtn = document.createElement("button");
+      delBtn.innerText = "❌";
+      delBtn.onclick = () => li.remove();
+
+      li.appendChild(delBtn);
+      document.getElementById("taskList").appendChild(li);
+      input.value = "";
+    }
+  }
+</script>
+
+</body>
+</html>
