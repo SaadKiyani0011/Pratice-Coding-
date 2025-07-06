@@ -4,8 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        
+    </style>
 </head>
 <body>
-    
+    <form action="">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <input type="submit" value="Submit">
+    </form>
+    <p id="message"></p>
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            const name = document.getElementById('name').value;
+            document.getElementById('message').textContent = `Hello, ${name}!`;
+        });
+    </script>
+
 </body>
 </html>
